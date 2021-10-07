@@ -7,9 +7,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import com.rx.R
 import com.rx.base.BaseFragment
 import com.rx.databinding.FragmentLandingBinding
+import com.rx.model.Status
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
@@ -26,7 +28,17 @@ class LandingFragment : BaseFragment<FragmentLandingBinding>(R.layout.fragment_l
         binding.rvMovie.adapter = movieAdapter
 
         landingViewModel.trendingMovies.observe(viewLifecycleOwner, Observer {
-            movieAdapter.setMovies(it)
+            when (it.status) {
+                Status.SUCCESS -> {
+                    showLoading(false, binding.pbLoading)
+                    movieAdapter.setMovies(it.data!!)
+                }
+                Status.ERROR -> {
+                    showLoading(false, binding.pbLoading)
+                    Snackbar.make(requireView(), it.message!!, Snackbar.LENGTH_SHORT).show()
+                }
+                Status.LOADING -> showLoading(true, binding.pbLoading)
+            }
         })
     }
 }

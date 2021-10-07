@@ -12,7 +12,7 @@ abstract class BaseViewModel : ViewModel() {
     val isLoading: LiveData<Boolean> get() = _isLoading
 
     override fun onCleared() {
-        compositeDisposable.dispose()
+        compositeDisposable.clear()
         super.onCleared()
     }
 

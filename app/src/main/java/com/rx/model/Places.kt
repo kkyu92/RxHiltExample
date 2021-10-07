@@ -3,7 +3,6 @@ package com.rx.model
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
-
 @JsonClass(generateAdapter = true)
 data class Places (
     val id: Int,

@@ -4,7 +4,7 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context=".ui.landing.LandingFragment">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -15,5 +15,8 @@
             android:padding="@dimen/standard_half"
             tools:listitem="@layout/item_movie" />
 
+        <include
+            android:id="@+id/pb_loading"
+            layout="@layout/layout_loading" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
