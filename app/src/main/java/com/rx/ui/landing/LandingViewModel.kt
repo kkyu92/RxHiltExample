@@ -2,8 +2,7 @@ package com.rx.ui.landing
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.clonebeamin.base.BaseViewModel
+import com.rx.base.BaseViewModel
 import com.rx.model.Movie
 import com.rx.model.Resource
 import com.rx.repository.MovieRepository

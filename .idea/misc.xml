@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/PC/AndroidStudioProjects/RxHiltExample/app/src/main/res/drawable/ic_people.xml" value="0.24259259259259258" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/RxHiltExample/app/src/main/res/drawable/ripple_back_icon.xml" value="0.24259259259259258" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/RxHiltExample/app/src/main/res/layout/fragment_landing.xml" value="0.14814814814814814" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/RxHiltExample/app/src/main/res/layout/fragment_movie_details.xml" value="0.33" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/RxHiltExample/app/src/main/res/layout/item_movie.xml" value="0.21557971014492755" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/RxHiltExample/app/src/main/res/layout/layout_loading.xml" value="0.14814814814814814" />
         <entry key="..\:/Users/withmind/AndroidStudioProjects/RxHiltExample/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/withmind/AndroidStudioProjects/RxHiltExample/app/src/main/res/layout/fragment_landing.xml" value="0.19010416666666666" />

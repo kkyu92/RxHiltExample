@@ -19,6 +19,8 @@ data class Movie(
     val video: Boolean?,
     @Json(name = "vote_count")
     val voteCount: Long?,
+    @Json(name = "vote_average")
+    val voteAverage: Double?,
     val title: String?,
     @Json(name = "release_date")
     val releaseDate: String?,
@@ -32,5 +34,13 @@ data class Movie(
     val posterPath: String?,
     val popularity: Double?,
     @Json(name = "media_type")
-    val mediaType: String?
+    val mediaType: String?,
+    val genres: List<Genre>?,
+    val runtime: Long?
+)
+
+@JsonClass(generateAdapter = true)
+data class Genre(
+    val id: Long,
+    val name: String
 )

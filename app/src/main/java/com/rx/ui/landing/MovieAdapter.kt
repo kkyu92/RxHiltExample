@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.rx.R
 import com.rx.databinding.ItemMovieBinding
@@ -37,6 +38,11 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(movie: Movie) {
+            itemView.setOnClickListener {
+                val directions =
+                    LandingFragmentDirections.actionLandingFragmentToMovieDetailsFragment(movie.id!!)
+                it.findNavController().navigate(directions)
+            }
             binding.apply {
                 GlideApp.with(ivPoster)
                     .load("https://image.tmdb.org/t/p/w500${movie.posterPath}")

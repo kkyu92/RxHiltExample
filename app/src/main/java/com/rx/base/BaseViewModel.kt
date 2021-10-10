@@ -1,4 +1,4 @@
-package com.clonebeamin.base
+package com.rx.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
