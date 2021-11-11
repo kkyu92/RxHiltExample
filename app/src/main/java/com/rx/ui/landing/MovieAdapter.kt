@@ -45,7 +45,9 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
             }
             binding.apply {
                 GlideApp.with(ivPoster)
-                    .load("https://image.tmdb.org/t/p/w500${movie.posterPath}")
+                    .load("https://image.tmdb.org/t/p/w500${movie.backdropPath}")
+                    .placeholder(R.drawable.ic_image_placeholder)
+                    .error(R.drawable.ic_image_error)
                     .into(ivPoster)
                 tvTitle.text = movie.title
                 tvReleaseDate.text = movie.releaseDate
